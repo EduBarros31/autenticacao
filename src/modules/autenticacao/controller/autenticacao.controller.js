@@ -1,8 +1,4 @@
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
-const dotenv = require("dotenv");
-dotenv.config();
-const Aluno = require("../../aluno/models/aluno.model");
+ 
 
 // Definindo variaveis de ambiente para TEMPO_ACESS_TOKEN e TEMPO_REFRESH_TOKEN
 const tempo_acess_token = process.env.TEMPO_ACESS_TOKEN;
