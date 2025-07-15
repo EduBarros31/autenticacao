@@ -1,12 +1,14 @@
 const Usuario = require("../models/usuario.model");
 const bcrypt =require('bcryptjs')
+
+
 class UsuarioController {
   static async cadastrar(req, res) {
     try {
       const { nome, papel, matricula, email, senha } = req.body;
       if (!matricula || !nome || !email || !senha || !papel) {
         return res
-          .status(400)
+          .status(400)()
           .json({ msg: "Todos os campos devem serem preenchidos!" });
       }
       // criptografando a senha
